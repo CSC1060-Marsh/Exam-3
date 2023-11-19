@@ -1,4 +1,5 @@
 import java.lang.reflect.Array;
+
 public class TestSchoolRecords {
     public static void main(String[] args) {
         //This creates a new person array named people with a length of 6.
@@ -15,6 +16,7 @@ public class TestSchoolRecords {
         people[4] = new Staff("George", "999 Staffy Avenue", "1-800-234-5678", "staffdude23@gmail.com", "Janitorial", 999999.23, "2 February 2222", "Cleaning Man");
         //This defines the 5th term of the array.
         people[5] = new Staff("Mrs. Scarlet", "224 Big Mansion Boulevard", "(970)-555-5555", "hitherehello@gmail.com", "Admissions", 2345.67, "5/6/78", "Annoying Telemarketer");
+
         //This creates a foreach loop for each instance of a person in the array.
         for (Person person : people) {
             //This prints out the person's details.
@@ -22,15 +24,16 @@ public class TestSchoolRecords {
             //This prints out a new line for easy reading.
             System.out.println();
         }
-    }
 
-    public static Array returnNewList(Array people) {
+        //This defines a new array called newPeople.
         Person[] newPeople = new Person[10];
+        //This does the following 10 times.
         for (int i = 0; i < 10; i++) {
+            //This does the following if the ith term of people is an instance of employee.
             if (people[i] instanceof Employee) {
+                //This adds the ith term of people to the ith term of newPeople.
                 newPeople[i] = people[i];
             }
         }
-        return newPeople;
     }
 }

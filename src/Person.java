@@ -35,6 +35,8 @@ public class Person {
         return emailAddress;
     }
     //This creates a getter for the details.
+    // This makes it much simpler to print out the details of all the people in the array
+    // instead of writing out the this.getName, this.getAddress, and so on in the foreach loop.
     public String getDetails() {
         //This returns the basic details using the above getters.
         return "Name: " + this.getName()
